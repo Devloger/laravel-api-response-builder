@@ -352,7 +352,7 @@ class ResponseBuilder extends ResponseBuilderBase
         $data = (new Converter())->convert($data);
         if ($data !== null && !is_object($data)) {
             // ensure we get object in final JSON structure in data node
-            $data = (object)$data;
+            $data = $data;
         }
 
         // get human readable message for API code or use message string (if given instead of API code)
